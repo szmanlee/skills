@@ -1,0 +1,74 @@
+{
+  "name": "file-helper-skill",
+  "version": "1.0.0",
+  "description": "一个强大且灵活的文件处理技能",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "dev": "nodemon index.js",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix"
+  },
+  "keywords": [
+    "file",
+    "utility",
+    "automation",
+    "ai-agent",
+    "skill"
+  ],
+  "author": "szmanlee",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.5.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "@types/jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "*.js",
+      "!node_modules/**",
+      "!coverage/**",
+      "!test/**"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js",
+      "**/*.test.js"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "error",
+      "prefer-const": "error"
+    }
+  },
+  "openclaw": {
+    "category": "utilities",
+    "description": "文件助手技能 - 提供强大的文件处理功能",
+    "author": "szmanlee",
+    "license": "MIT",
+    "keywords": ["file", "utility", "automation"],
+    "supportedLanguages": ["javascript"],
+    "dependencies": ["chokidar"],
+    "engine": "node"
+  }
+}
